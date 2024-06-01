@@ -1,5 +1,5 @@
-This Reop contiaon all the code examples and excersis code of Practical Binay Analysis Book.
-I have made some notes while i was reading the book. If it usefull to then feel free to use.
+This Reop contian all the code examples and exercise code of Practical Binay Analysis Book.
+I have took some persnol notes for my self while reading the book. If it seems usefull you to you then fell free to use.
 
-hope you find somethig usefull in this.
+Hope you find somethig usefull in this.
 
