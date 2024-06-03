@@ -1,12 +1,14 @@
 ELF binaries really consist of only four types of components: an executable header, a series of (optional) program headers, a number of sections, and a series of (optional) section headers, one per section
 
--- HEADER ORDER --
+HEADER ORDER 
 ------------------
+Executable Header
 
-Executable Header.
-Program Header.
-Section.
-Section Header. 
+Program Header
+
+Section
+
+Section Header 
 
 
 # Executable Header
