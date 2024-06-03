@@ -2,6 +2,7 @@ ELF binaries really consist of only four types of components: an executable head
 
 -- HEADER ORDER --
 ------------------
+
 Executable Header
 Program Header
 Section
@@ -14,6 +15,7 @@ Every ELF file starts with an executable header, which is just a structured seri
 
 ELF64_Ehdr in /usr/include/elf.h
 
+```
 typedef struct {
 unsigned char e_ident[16]; 	/* Magic number and other info	     /*
 uint16_t    e_type;		    /* Object file type		             /*
@@ -29,7 +31,7 @@ uint16_t    e_shentsize;	/* Section header table entry size   /*
 uint16_t    e_shnum;		/* Section header table entry count  /*
 uint16_t    e_shstrndx;		/* Section header string table index /*
 } Elf64_Ehdr;
-
+```
 
 # e_ident Array
 ----------------
@@ -48,6 +50,7 @@ EI_VERSION, indicates the version of the ELF specification used when creating th
 
 EI_OSABI and EI_ABIVERSION bytes denote information regarding the application binary interface (ABI) and operating system (OS) for which the binary was compiled. If the EI_OSABI byte is set to nonzero, it means that some ABI- or OS-specific extensions are used in the ELF file. The default value of zero indicates that the binary targets the UNIX System V ABI. The EI_ABIVERSION byte denotes the specific version of the ABI You’ll usually see this set to zero because it’s not necessary to specify any version information when the default EI_OSABI is used.
 
+```
 ELF Header:
 Magic: 7f 45 4c 46 02 01 01 00 00 00 00 00 00 00 00 00
 Class:					            ELF64
@@ -68,5 +71,5 @@ Number of program headers:		    9
 Size of section headers:		    64 (bytes)
 Number of section headers:		    31
 Section header string table index: 	28
-
+```
 
