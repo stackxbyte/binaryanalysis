@@ -6,12 +6,10 @@ Executable Header
 Program Header
 Section
 Section Header 
-------------------
 
 
 # Executable Header
 -------------------
-
 Every ELF file starts with an executable header, which is just a structured series of bytes telling you that it’s an ELF file, what kind of ELF file it is, and where in the file to find all the other contents.
 
 ELF64_Ehdr in /usr/include/elf.h
@@ -35,6 +33,7 @@ uint16_t    e_shstrndx;		/* Section header string table index /*
 
 # e_ident Array
 ----------------
+
 The executable header (and the ELF file) starts with a 16-byte array called e_ident. The e_ident array always starts with a 4-byte “magic value” identifying the file as an ELF binary. The magic value consists of the hexadecimal number 0x7f, followed by the ASCII character codes for the letters E, L, and F
 
 The indexes for these bytes (indexes 4 through 15 in the e_ident array) are symbolically referred to as EI_CLASS, EI_DATA, EI_VERSION, EI_OSABI, EI_ABIVERSION, and EI_PAD, respectively
