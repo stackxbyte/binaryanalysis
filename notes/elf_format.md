@@ -3,10 +3,10 @@ ELF binaries really consist of only four types of components: an executable head
 -- HEADER ORDER --
 ------------------
 
-Executable Header
-Program Header
-Section
-Section Header 
+Executable Header.
+Program Header.
+Section.
+Section Header. 
 
 
 # Executable Header
