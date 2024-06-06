@@ -1,7 +1,7 @@
 ELF binaries really consist of only four types of components: an executable header, a series of (optional) program headers, a number of sections, and a series of (optional) section headers, one per section
 
 # HEADER ORDER 
-------------------
+
 Executable Header<br>
 Program Header<br> 
 Section<br>
@@ -9,7 +9,7 @@ Section Header<br>
 
 
 # Executable Header
--------------------
+
 Every ELF file starts with an executable header, which is just a structured series of bytes telling you that it’s an ELF file, what kind of ELF file it is, and where in the file to find all the other contents.
 
 ELF64_Ehdr in /usr/include/elf.h
@@ -33,7 +33,7 @@ uint16_t    e_shstrndx;     /* Section header string table index/*
 } Elf64_Ehdr;
 ```
 
-# e_ident Array
+## e_ident Array
 
 The executable header (and the ELF file) starts with a 16-byte array called e_ident. The e_ident array always starts with a 4-byte “magic value” identifying the file as an ELF binary. The magic value consists of the hexadecimal number 0x7f, followed by the ASCII character codes for the letters E, L, and F
 
@@ -76,7 +76,7 @@ Section header string table index: 	28
 ```
 
 
-# e_type, e_machine, and e_version Fields
+### e_type, e_machine, and e_version Fields
 
 **e_type**, specifies the type of the binary. The most common values you’ll encounter here are ***ET_REL (indicating a relocatable object file), ET_EXEC (an executable binary), and ET_DYN (a dynamic library, also called a shared object file)***
 
