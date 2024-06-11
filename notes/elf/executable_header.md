@@ -1,17 +1,3 @@
-
-
-
-
-ELF binaries really consist of only four types of components: an executable header, a series of (optional) program headers, a number of sections, and a series of (optional) section headers, one per section
-
-## HEADER ORDER 
-
-Executable Header [Executable Header](elf/executable_header.md)<br>
-Program Header<br> 
-Section<br>
-Section Header<br>
-
-![plot](images/elf_headers.png)
 ## Executable Header
 
 Every ELF file starts with an executable header, which is just a structured series of bytes telling you that it’s an ELF file, what kind of ELF file it is, and where in the file to find all the other contents.
@@ -114,3 +100,4 @@ which the binary is compiled e_flags field to indicate additional details about 
 ## The e_shstrndx Field
 
 **e_shstrndx** field contains the index (in the section header table) of the header associated with a special string table section, called .shstrtab. This is a dedicated section that contains a table of null-terminated ASCII strings, which store the names of all the sections in the binary
+
