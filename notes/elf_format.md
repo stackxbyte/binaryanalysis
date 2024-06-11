@@ -1,14 +1,18 @@
+
+
+
+
 ELF binaries really consist of only four types of components: an executable header, a series of (optional) program headers, a number of sections, and a series of (optional) section headers, one per section
 
-# HEADER ORDER 
+## HEADER ORDER 
 
 Executable Header<br>
 Program Header<br> 
 Section<br>
 Section Header<br>
 
-
-# Executable Header
+![plot](images/elf_headers.png)
+## Executable Header
 
 Every ELF file starts with an executable header, which is just a structured series of bytes telling you that it’s an ELF file, what kind of ELF file it is, and where in the file to find all the other contents.
 
@@ -76,12 +80,16 @@ Section header string table index: 	28
 ```
 
 
-### e_type, e_machine, and e_version Fields
+## e_type, e_machine, and e_version Fields
 
 **e_type**, specifies the type of the binary. The most common values you’ll encounter here are ***ET_REL (indicating a relocatable object file), ET_EXEC (an executable binary), and ET_DYN (a dynamic library, also called a shared object file)***
 
 **e_machine** field, which denotes the architecture that the binary is intended to run on the value usually be set to EM_X86_64 since you will mostly be working on 64-bit x86 binaries. Other values you’re likely to encounter include EM_386 (32-bit x86) and EM_ARM (for ARM binaries).
 
 **e_version** field serves the same role as the EI_VERSION byte in the e_ident array. it indicates the version of the ELF specification that was used when creating the binary. As this field is 32 bits wide, the only possible value is 1 (EV_CURRENT) to indicate version 1 of the specification.
+
+## e_entry Field
+
+**e_entry** field denotes the entry point of the binary; this is the virtual address at which execution should start. This is where the interpreter (typically ld-linux.so) will transfer control after it finishes loading the binary into virtual memory
 
 
