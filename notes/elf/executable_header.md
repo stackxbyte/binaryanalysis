@@ -2,6 +2,8 @@
 
 Every ELF file starts with an executable header, which is just a structured series of bytes telling you that it’s an ELF file, what kind of ELF file it is, and where in the file to find all the other contents.
 
+![plot](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format#File_header)
+
 ELF64_Ehdr in /usr/include/elf.h
 
 ```
